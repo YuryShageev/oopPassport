@@ -9,6 +9,10 @@ public class PassportStorage {
     }
 
     public void add(Passport passport) {
+        Passport old = get(passport.getNumber());
+        if (old != null) {
+            passports.remove(old);
+        }
         passports.add(passport);
     }
 
@@ -19,5 +23,10 @@ public class PassportStorage {
             }
         }
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return passports.toString();
     }
 }
