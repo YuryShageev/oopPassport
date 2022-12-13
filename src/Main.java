@@ -12,5 +12,8 @@ public class Main {
 
         PassportStorage passportStorage = new PassportStorage(passports);
         System.out.println(passportStorage);
+
+        passportStorage.add(new Passport("12341", "Федя", "Федотов", "Петров", LocalDate.now().minusDays(-31)));
+        System.out.println(passportStorage);
     }
 }

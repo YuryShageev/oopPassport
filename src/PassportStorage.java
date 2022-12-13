@@ -12,8 +12,8 @@ public class PassportStorage {
         Passport old = get(passport.getNumber());
         if (old != null) {
             passports.remove(old);
-            passports.add(passport);
         }
+        passports.add(passport);
     }
 
     public Passport get(String number) {
